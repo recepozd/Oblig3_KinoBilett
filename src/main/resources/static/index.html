@@ -1,10 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </head>
 <body>
+<div class="container">
+    <div class="row justify-center-center">
+        <div class="col-md-8 col justify-center-center main mx-2 bgwhite p-4 ">
+            <h1 class="text-center display-4 font-weight-normal">
+                Bestilling av kinobiletter</h1>
+            <table class="table table-bordered">
+                <form id="minFrom" name="minForm">
+                    <tr>
+                        <td><label for="film">Velg film:</label></td>
+                        <td><select class="accordion-body"id="film">
+                                <option value="">Velg film her</option>
+                                <option class="valg">Kampen om Narvik</option>
+                                <option class="valg">Avatar
+                                    2
+                                </option>
+                                <option class="valg">Folk og
+                                    røvere i
+                                    Kardemommeby
+                                </option>
+                                <option class="valg">A Man
+                                    Called
+                                    Otto
+                                </option>
+                                <option class="valg">Plane
+                                </option>
+                            </select>
 
+
+                        <td>
+                            <div id="fFilm"
+                                 style="color: red"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Antall:</label> <br></td>
+                        <td>
+                            <input class="form-controll"
+                                   id="antall" max="20"
+                                   min="1"
+                                   name="antall" type="number">
+                        </td>
+                        <td>
+                            <div id="fAntall"
+                                 style="color:red">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Fornavn:</label></td>
+                        <td><input class="form-controll"
+                                   id="fornavn" type="text"
+                        ></td>
+                        <td>
+                            <div id="FNavn"
+                                 style="color:red">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Etternavn:</label></td>
+                        <td><input class="form-controll"
+                                   id="etternavn"
+                                   type="text"></td>
+                        <td>
+                            <div id="fENavn"style="color:red">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Telefonnr:</label></td>
+                        <td>
+                            <input class="form-controll"
+                                   id="telefonnr"
+                                   type="tel"></td>
+                        <td>
+                            <div id="fTlfNr"
+                                 style="color:red">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Epost:</label></td>
+                        <td>
+                            <input
+                                    class="form-controll"
+                                    id="epost"
+                                    type="email">
+                        </td>
+                        <td>
+                            <div id="fEpost"
+                                 style="color:red">
+                            </div>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            <!--KJØP BILLETT-->
+            <tr>
+                <td>
+                    <button class="btn btn-primary"
+                            id="kjopBillett"
+                            onclick="regBillett()"
+                            type="submit">Kjøp
+                        billett
+                    </button>
+                </td>
+            </tr>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <!--Viser alle billettene--->
+        <tr>
+            <td>
+                <h2>Alle billettene</h2>
+                <div class="col-md-8"
+                     id="alleBillettene"></div>
+            </td>
+        </tr>
+        <!-- RESET ALT--->
+        <tr>
+            <td>
+                <button
+                        class="btn btn-danger"
+                        onclick="slettBilletter()"
+                >Slett alle
+                    billettene
+                </button>
+            </td>
+        </tr>
+</div>
+    </div>   <script src="index.js"></script>
 </body>
 </html>
